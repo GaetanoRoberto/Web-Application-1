@@ -1,0 +1,101 @@
+// get all pages
+GET http://localhost:3001/api/pages/backoffice HTTP/1.1
+// get all pages
+###
+GET http://localhost:3001/api/pages/frontoffice HTTP/1.1
+### get page<id>
+GET http://localhost:3001/api/pages/backoffice/44
+### get page<id>
+GET http://localhost:3001/api/pages/frontoffice/78
+### CREO SESSION admin
+POST http://localhost:3001/api/sessions HTTP/1.1
+content-type: application/json
+
+{
+    "username": "u2@p.it",
+    "password": "pwd"
+}
+
+### post page
+POST http://localhost:3001/api/pages HTTP/1.1
+content-type: application/json
+
+{
+    "titolo": "Pagina con contenuto",
+    "dataPubblicazione":"2023-06-24",
+    "dataCreazione":"2023-06-24",
+    "autoreId": 3,
+    "blocchi":[{
+        "tipo":"header",
+        "contenuto":"Header della pagina ",
+        "posizione":0
+
+    },{
+        "tipo":"immagine",
+        "contenuto":"Pizza.jpg",
+        "posizione":1
+    }
+    ]
+}
+### POST EDIT page<id>
+POST http://localhost:3001/api/pages/65 HTTP/1.1
+content-type: application/json
+
+{
+    "titolo": "Pagina pubblicata",
+    "autoreId": 2,
+    "dataPubblicazione":"2023-08-21",
+    "dataCreazione":"2023-06-22",
+
+    "blocchi":[{
+        "tipo":"header",
+        "contenuto":"Contenuto dell'header",
+        "posizione":0
+    },{
+        "tipo":"immagine",
+        "contenuto":"Pizza.jpg",
+        "posizione":1
+    }
+    ]
+}
+### delete page<id>
+DELETE http://localhost:3001/api/pages/72
+
+
+### CREO SESSION non admin
+POST http://localhost:3001/api/sessions HTTP/1.1
+content-type: application/json
+
+{
+    "username": "u3@p.it",
+    "password": "pwd"
+}
+
+### GET USERS
+GET http://localhost:3001/api/users
+
+### GET SITENAME
+GET http://localhost:3001/api/sitename
+### PUT SITENAME 
+PUT http://localhost:3001/api/sitename
+content-type: application/json
+
+{
+    "sitename": " CDM"
+}
+
+### GET ALL IMAGES
+GET http://localhost:3001/api/images
+
+### CREO SESSION admin
+POST http://localhost:3001/api/sessions HTTP/1.1
+content-type: application/json
+
+{
+    "username": "u2@p.it",
+    "password": "pwd"
+}
+###
+GET http://localhost:3001/api/sessions/current
+###
+DELETE http://localhost:3001/api/sessions/current
