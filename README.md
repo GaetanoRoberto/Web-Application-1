@@ -1,7 +1,12 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/suhcjUE-)
-# Exam #1: "CSM"
-## Student: s318989 ROBERTO GAETANO
+# Project: "CSM"
+Project of the Web Application 1 course, made in javascript with the VsCode IDE. The goal of the project is to design and implement a web application to manage a small content management system (CMS). The project was made with the React framework, using React Bootstrap for styling and NodeJs as runtime environment. See Below for the Project Technical Description.
 
+## ADD PAGE ALL'AVVIO PER UTENTE LOGGATO MA NON ADMIN
+
+![Screenshot](./add.png)
+## BACKOFFICE PER UTENTE LOGGATO MA NON ADMIN
+
+![Screenshot](./backoffice.png)
 ## React Client Application Routes
 - Route `/`: pagina web principale frontoffice che mostra la lista di tutte le pagine pubblicate in ordine di data di pubblicazione
 - Route `/backoffice`: pagina web del backoffice che mostra tutte le pagine di qualsiasi utente, disponibile solo da loggato.
@@ -406,12 +411,6 @@
 - `PageForm` (in `components/PageForm.jsx`): componente usato per mostrare la pagina nel dettaglio oppure il form per edit/add
 
 
-## ADD PAGE ALL'AVVIO PER UTENTE LOGGATO MA NON ADMIN
-
-![Screenshot](./add.png)
-## BACKOFFICE PER UTENTE LOGGATO MA NON ADMIN
-
-![Screenshot](./backoffice.png)
 ## Users Credentials 
 
 | email | password |username| other_info | 
